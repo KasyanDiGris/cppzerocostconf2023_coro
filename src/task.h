@@ -22,6 +22,7 @@ public:
 
     void Start() {
         if (!Started_) {
+            Started_ = true;
             std::coroutine_handle<promise_type>::from_promise(*Promise_).resume();
         }
     }
